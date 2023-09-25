@@ -1,4 +1,5 @@
 using Videojuegos.Data;
+using Videojuegos.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,10 @@ builder.Services.AddSwaggerGen();
 
 //base de datos   DbContext
 builder.Services.AddSqlServer<VideojuegosContext>(builder.Configuration.GetConnectionString("Conexion"));
+
+
+//inyectar capa servicios
+builder.Services.AddScoped<JuegosService>();
 
 var app = builder.Build();
 
