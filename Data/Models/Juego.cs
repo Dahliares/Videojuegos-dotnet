@@ -11,7 +11,7 @@ public partial class Juego
 
     [MaxLength(50, ErrorMessage = "El nombre no puede pasar de 50 caracteres.")]
     public string Nombre { get; set; }
-
+    
     public string? Consola { get; set; }
 
     public string? Tipo { get; set; }
